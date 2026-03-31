@@ -1,8 +1,8 @@
 {
   "name": "@ermand/agent-skills",
-  "version": "1.0.0",
-  "description": "Codebase analysis skills for AI coding agents — Claude Code, OpenCode, Codex, Cursor",
-  "keywords": ["agent-skills", "codebase", "documentation", "claude", "cursor", "codex", "opencode"],
+  "version": "1.1.0",
+  "description": "Codebase analysis and code review skills for AI coding agents — Claude Code, OpenCode, Codex, Cursor",
+  "keywords": ["agent-skills", "codebase", "documentation", "code-review", "claude", "cursor", "codex", "opencode"],
   "repository": {
     "type": "git",
     "url": "https://github.com/ermand/agents-skills.git"
@@ -10,6 +10,7 @@
   "files": [
     "analysing-codebase/",
     "analysing-codebase-full/",
+    "code-review/",
     "README.md",
     "LICENSE"
   ],

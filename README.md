@@ -1,18 +1,17 @@
 # @ermand/agent-skills
 
-Skills for AI coding agents that analyze codebases and generate documentation for engineers and agents alike.
+Skills for AI coding agents — codebase analysis, documentation generation, and code review.
 
 ## Install
 
 ```bash
-# Both skills
+# All skills
 npx skills@latest add ermand/agents-skills
 
-# Compact only (default)
+# Individual skills
 npx skills@latest add ermand/agents-skills --skill analysing-codebase
-
-# Full version only
 npx skills@latest add ermand/agents-skills --skill analysing-codebase-full
+npx skills@latest add ermand/agents-skills --skill code-review
 ```
 
 Once published to npm:
@@ -27,6 +26,7 @@ npx skills@latest add @ermand/agent-skills
 |-------|-------------|----------------|
 | `analysing-codebase` | Quick analysis of any codebase — generates the 9 highest-value docs | 9 |
 | `analysing-codebase-full` | Deep 4-phase analysis for large or complex codebases | 12 |
+| `code-review` | Review a file, path, or PR — structured feedback by severity | — |
 
 ## What gets generated
 
