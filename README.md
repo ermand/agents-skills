@@ -1,6 +1,6 @@
 # @ermand/agent-skills
 
-Skills for AI coding agents — codebase analysis, documentation generation, and code review.
+A comprehensive collection of specialized skills, workflows, and behavioral guidelines for AI coding agents (Claude Code, OpenCode, Codex, Cursor).
 
 ## Install
 
@@ -66,7 +66,11 @@ npx skills@latest add @ermand/agent-skills
 | `writing-skills` | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
 
 
-## What gets generated
+## How Skills Work
+
+Skills act as specialized workflows that agents follow to complete tasks more effectively. While some skills establish behavioral patterns (like TDD or systematic debugging), others generate artifacts.
+
+For example, using the `analysing-codebase-full` skill generates the following documentation:
 
 **Agent context files** (auto-read by each tool):
 
