@@ -1,23 +1,65 @@
 # @ermand/agent-skills
 
-A comprehensive collection of specialized skills, workflows, and behavioral guidelines for AI coding agents (Claude Code, OpenCode, Codex, Cursor).
+Production-grade engineering skills for AI coding agents (Claude Code, OpenCode, Codex, Cursor).
+
+Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development.
+
+## Commands
+
+```text
+   DEFINE         PLAN           BUILD          VERIFY         REVIEW         SHIP
+
+ ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐
+ │  Idea  │ ──> │  Spec  │ ──> │  Code  │ ──> │  Test  │ ──> │   QA   │ ──> │   Go   │
+ │ Refine │     │  PRD   │     │  Impl  │     │ Debug  │     │  Gate  │     │  Live  │
+ └────────┘     └────────┘     └────────┘     └────────┘     └────────┘     └────────┘
+   /spec          /plan          /build         /test         /review         /ship
+```
+
+7 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
+
+| What you're doing | Command | Key principle |
+|-------------------|---------|---------------|
+| Define what to build | `/spec` | Spec before code |
+| Plan how to build it | `/plan` | Small, atomic tasks |
+| Build incrementally | `/build` | One slice at a time |
+| Prove it works | `/test` | Tests are proof |
+| Review before merge | `/review` | Improve code health |
+| Simplify the code | `/code-simplify` | Clarity over cleverness |
+| Ship to production | `/ship` | Faster is safer |
+
+Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on.
 
 ## Install
 
-```bash
-# All skills
-npx skills@latest add ermand/agents-skills
+### Install Commands & Hooks
 
-# Individual skills
-npx skills@latest add ermand/agents-skills --skill analysing-codebase
-npx skills@latest add ermand/agents-skills --skill analysing-codebase-full
-npx skills@latest add ermand/agents-skills --skill code-review
+**For Claude Code:**
+```bash
+cp -r node_modules/@ermand/agent-skills/.claude/commands ~/.claude/
+```
+```bash
+cp -r node_modules/@ermand/agent-skills/hooks ~/.claude/
 ```
 
-Once published to npm:
-
+**For OpenCode:**
 ```bash
-npx skills@latest add @ermand/agent-skills
+cp -r node_modules/@ermand/agent-skills/.opencode/commands ~/.config/opencode/
+```
+
+### Install Skills
+
+**All skills:**
+```bash
+npx skills@latest add ermand/agents-skills
+```
+
+**Individual skills (examples):**
+```bash
+npx skills@latest add ermand/agents-skills --skill analysing-codebase
+```
+```bash
+npx skills@latest add ermand/agents-skills --skill code-review
 ```
 
 ## Skills
@@ -67,7 +109,6 @@ npx skills@latest add @ermand/agent-skills
 | `write-a-prd` | Create a PRD through user interview, codebase exploration, and module design, then submit as a GitHub issue. Use when user wants to write a PRD, create a product requirements document, or plan a new feature. |
 | `writing-plans` | Use when you have a spec or requirements for a multi-step task, before touching code |
 | `writing-skills` | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
-
 
 ## How Skills Work
 
