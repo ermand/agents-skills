@@ -98,6 +98,56 @@ For example, using the `analysing-codebase-full` skill generates the following d
 - `TESTING_GUIDE.md` *(full only)* — test strategy, factories, mocking, coverage
 - `DECISION_LOG.md` *(full only)* — architectural decisions and trade-offs
 
+## Commands and Hooks
+
+This repository also includes custom Slash Commands and Tool Hooks for **Claude Code** and **OpenCode**. These provide structured workflows (e.g. `/plan`, `/review`, `/ship`) and automatic triggers (e.g. run linters, play sounds, send notifications) to enhance your agent's capabilities.
+
+### For Claude Code
+
+Claude Code supports custom user-defined commands and tool hooks to orchestrate workflows.
+
+**Install Commands:**
+Copy the commands from the `.claude/commands` directory into your project's or global `.claude` directory:
+```bash
+# Global installation (recommended)
+cp -r node_modules/@ermand/agent-skills/.claude/commands ~/.claude/
+
+# Or per-project installation
+mkdir -p .claude
+cp -r node_modules/@ermand/agent-skills/.claude/commands .claude/
+```
+
+**Install Hooks:**
+If you want to use the included Python hooks (for MacOS notifications, audio cues, linting, etc.):
+```bash
+cp -r node_modules/@ermand/agent-skills/hooks ~/.claude/
+```
+*Note: Make sure to review the Python hooks and adjust any hardcoded paths or requirements as needed for your local environment.*
+
+### For OpenCode
+
+OpenCode shares a similar command architecture and can utilize custom personas/commands.
+
+**Install Commands:**
+Copy the commands from the `.opencode/commands` directory into your global opencode configuration directory:
+```bash
+cp -r node_modules/@ermand/agent-skills/.opencode/commands ~/.config/opencode/
+```
+
+### Available Commands
+
+Once installed, you can trigger these workflows directly in your CLI by typing `/` followed by the command name:
+
+- `/plan` - Initiates a structured planning phase before writing any code.
+- `/spec` - Generates a detailed specification document.
+- `/build` - Guides the agent through the implementation phase.
+- `/test` - Enforces a testing workflow (e.g., TDD).
+- `/review` - Triggers a self-review or peer-review of the written code.
+- `/ship` - Prepares the code for deployment or merging (linting, tests, finalizing PRs).
+- `/code-simplify` - Refactors code to reduce complexity and improve readability.
+- `/code-review` - Performs a multi-axis code review on the current diff or files.
+- `/interview` / `/pr-open` - Facilitates user interviews for requirements or drafts PR descriptions.
+
 ## License
 
 MIT © [Ermand Durro](https://github.com/ermand)
