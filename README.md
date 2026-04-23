@@ -6,14 +6,22 @@ Skills encode the workflows, quality gates, and best practices that senior engin
 
 ## Commands
 
-```text
-   DEFINE         PLAN           BUILD          VERIFY         REVIEW         SHIP
+```mermaid
+flowchart LR
+    A["💡 DEFINE<br>Idea Refine"]:::phase
+    B["📝 PLAN<br>Spec PRD"]:::phase
+    C["🏗️ BUILD<br>Code Impl"]:::phase
+    D["🧪 VERIFY<br>Test Debug"]:::phase
+    E["🔍 REVIEW<br>QA Gate"]:::phase
+    F["🚀 SHIP<br>Go Live"]:::phase
 
- ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐     ┌────────┐
- │  Idea  │ ──> │  Spec  │ ──> │  Code  │ ──> │  Test  │ ──> │   QA   │ ──> │   Go   │
- │ Refine │     │  PRD   │     │  Impl  │     │ Debug  │     │  Gate  │     │  Live  │
- └────────┘     └────────┘     └────────┘     └────────┘     └────────┘     └────────┘
-   /spec          /plan          /build         /test         /review         /ship
+    A -- " /spec " --> B
+    B -- " /plan " --> C
+    C -- " /build " --> D
+    D -- " /test " --> E
+    E -- " /review " --> F
+
+    classDef phase fill:#1f2937,stroke:#4b5563,stroke-width:2px,color:#f9fafb,border-radius:6px
 ```
 
 7 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
