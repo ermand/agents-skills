@@ -1,9 +1,13 @@
 ---
 name: brainstorming
-description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+description: Use when starting any creative work — creating features, building components, adding functionality, or modifying behavior.
 ---
 
 # Brainstorming Ideas Into Designs
+
+## When to Use
+
+Use when starting any creative work — creating features, building components, adding functionality, or modifying behavior.
 
 ## Overview
 
@@ -94,3 +98,20 @@ digraph brainstorming {
 - **Explore alternatives** - Always propose 2-3 approaches before settling
 - **Incremental validation** - Present design, get approval before moving on
 - **Be flexible** - Go back and clarify when something doesn't make sense
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

@@ -1,9 +1,17 @@
 ---
 name: prd-to-issues
-description: Break a PRD into independently-grabbable GitHub issues using tracer-bullet vertical slices. Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items.
+description: Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items.
 ---
 
 # PRD to Issues
+
+## Overview
+
+This skill establishes standard practices and workflows for Prd To Issues.
+
+## When to Use
+
+Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items.
 
 Break a PRD into independently-grabbable GitHub issues using vertical slices (tracer bullets).
 
@@ -86,3 +94,20 @@ Reference by number from the parent PRD:
 </issue-template>
 
 Do NOT close or modify the parent PRD issue.
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

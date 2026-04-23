@@ -19,6 +19,14 @@ This is not negotiable. This is not optional. You cannot rationalize your way ou
 
 # Using Skills
 
+## Overview
+
+This skill establishes standard practices and workflows for Using Superpowers.
+
+## When to Use
+
+Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
+
 ## The Rule
 
 **Invoke relevant or requested skills BEFORE any response or action.** Even a 1% chance a skill might apply means that you should invoke the skill to check. If an invoked skill turns out to be wrong for the situation, you don't need to use it.
@@ -93,3 +101,12 @@ The skill itself tells you which.
 ## User Instructions
 
 Instructions say WHAT, not HOW. "Add X" or "Fix Y" doesn't mean skip workflows.
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.

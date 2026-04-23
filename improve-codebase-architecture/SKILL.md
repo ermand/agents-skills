@@ -1,9 +1,17 @@
 ---
 name: improve-codebase-architecture
-description: Explore a codebase to find opportunities for architectural improvement, focusing on making the codebase more testable by deepening shallow modules. Use when user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more AI-navigable.
+description: Use when user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more AI-navigable.
 ---
 
 # Improve Codebase Architecture
+
+## Overview
+
+This skill establishes standard practices and workflows for Improve Codebase Architecture.
+
+## When to Use
+
+Use when user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more AI-navigable.
 
 Explore a codebase like an AI would, surface architectural friction, discover opportunities for improving testability, and propose module-deepening refactors as GitHub issue RFCs.
 
@@ -74,3 +82,20 @@ After comparing, give your own recommendation: which design you think is stronge
 ### 7. Create GitHub issue
 
 Create a refactor RFC as a GitHub issue using `gh issue create`. Use the template in [REFERENCE.md](REFERENCE.md). Do NOT ask the user to review before creating — just create it and share the URL.
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

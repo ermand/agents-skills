@@ -1,9 +1,17 @@
 ---
 name: idea-refine
-description: Refines ideas iteratively. Refine ideas through structured divergent and convergent thinking. Use "idea-refine" or "ideate" to trigger.
+description: Use when Refines ideas iteratively. Refine ideas through structured divergent and convergent thinking. Use "idea-refine" or "ideate" to trigger.
 ---
 
 # Idea Refine
+
+## Overview
+
+This skill establishes standard practices and workflows for Idea Refine.
+
+## When to Use
+
+Use when Refines ideas iteratively. Refine ideas through structured divergent and convergent thinking. Use "idea-refine" or "ideate" to trigger.
 
 Refines raw ideas into sharp, actionable concepts worth building through structured divergent and convergent thinking.
 
@@ -165,6 +173,14 @@ Read `examples.md` in this skill directory for examples of what great ideation s
 - Ignoring existing codebase constraints when ideating inside a project
 - Jumping straight to Phase 3 output without running Phases 1 and 2
 
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
 ## Verification
 
 After completing an ideation session:

@@ -1,9 +1,13 @@
 ---
 name: find-skills
-description: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
+description: Use when Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
 ---
 
 # Find Skills
+
+## Overview
+
+This skill establishes standard practices and workflows for Find Skills.
 
 This skill helps you discover and install skills from the open agent skills ecosystem.
 
@@ -131,3 +135,20 @@ I can still help you with this task directly! Would you like me to proceed?
 If this is something you do often, you could create your own skill:
 npx skills init my-xyz-skill
 ```
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

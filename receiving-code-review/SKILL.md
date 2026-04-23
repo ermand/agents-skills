@@ -5,6 +5,10 @@ description: Use when receiving code review feedback, before implementing sugges
 
 # Code Review Reception
 
+## When to Use
+
+Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
+
 ## Overview
 
 Code review requires technical evaluation, not emotional performance.
@@ -211,3 +215,20 @@ When replying to inline review comments on GitHub, reply in the comment thread (
 Verify. Question. Then implement.
 
 No performative agreement. Technical rigor always.
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

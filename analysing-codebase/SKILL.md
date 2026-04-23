@@ -1,9 +1,17 @@
 ---
 name: analysing-codebase
-description: Analyzes an existing codebase and generates structured documentation for onboarding engineers and AI agents. Use when asked to document a codebase, onboard to a new project, create CLAUDE.md or AGENTS.md, or generate architecture, API, or domain documentation.
+description: Use when asked to document a codebase, onboard to a new project, create CLAUDE.md, or generate architecture documentation.
 ---
 
 # Analysing Codebase
+
+## Overview
+
+This skill establishes standard practices and workflows for Analysing Codebase.
+
+## When to Use
+
+Use when asked to document a codebase, onboard to a new project, create CLAUDE.md, or generate architecture documentation.
 
 You are a principal engineer. Analyze this codebase and generate the following documents in `./docs/`. Read the full project structure, configs, routes, models, and migrations before writing anything. Be specific — reference actual file paths, class names, and line numbers. No placeholders, no generic content.
 
@@ -155,3 +163,20 @@ After generating `CLAUDE.md`, also create agent-specific variants so every tool 
 5. **Validate.** If you claim a pattern is universal, check at least 5 instances.
 6. **Cross-reference.** Link between docs with relative paths.
 7. **Use Mermaid** for architecture, ER diagrams, state machines, and domain dependencies.
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

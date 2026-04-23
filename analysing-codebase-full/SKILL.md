@@ -1,9 +1,17 @@
 ---
 name: analysing-codebase-full
-description: Comprehensive 4-phase codebase analysis generating 12 documentation files including architecture, data models, business rules, API reference, and AI agent context files. Use when thorough onboarding documentation is needed, when the compact version lacks sufficient detail, or for large/complex codebases.
+description: Use when thorough onboarding documentation is needed for large or complex codebases, or when the compact analysis lacks sufficient detail.
 ---
 
 # Analysing Codebase (Full)
+
+## Overview
+
+This skill establishes standard practices and workflows for Analysing Codebase Full.
+
+## When to Use
+
+Use when thorough onboarding documentation is needed for large or complex codebases, or when the compact analysis lacks sufficient detail.
 
 A 4-phase, 12-document deep analysis of a codebase. Produces documentation for both new engineers and AI coding agents.
 
@@ -73,3 +81,20 @@ Before marking any document complete:
 - [ ] No placeholder text (use `[VERIFY]` only for genuinely uncertain items)
 - [ ] Cross-references use correct relative paths
 - [ ] An AI agent reading only `CLAUDE.md` + `CODEBASE_MAP.md` could make a correct PR for a simple feature
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
+
+## Red Flags
+
+**STOP and restart the process if you see any of these:**
+- Skipping mandatory steps in the checklist.
+- Failing to verify outputs before asserting success.
+- Proceeding without user approval when required.
+- Writing code before planning or testing (if dictated by the skill).

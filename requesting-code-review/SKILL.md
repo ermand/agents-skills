@@ -5,6 +5,14 @@ description: Use when completing tasks, implementing major features, or before m
 
 # Requesting Code Review
 
+## Overview
+
+This skill establishes standard practices and workflows for Requesting Code Review.
+
+## When to Use
+
+Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+
 Dispatch superpowers:code-reviewer subagent to catch issues before they cascade.
 
 **Core principle:** Review early, review often.
@@ -103,3 +111,12 @@ You: [Fix progress indicators]
 - Request clarification
 
 See template at: requesting-code-review/code-reviewer.md
+
+
+## Common Rationalizations
+
+Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
+- "This task is too small or simple to need the full process."
+- "I can just quickly do it without the checklist."
+- "I already know how this works, so I don't need to verify."
+**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
