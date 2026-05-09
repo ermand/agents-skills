@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Use when asked to review code, a file, a PR, or a diff — checks for bugs, security vulnerabilities, performance issues, missing tests, and style violations.
+description: Performs comprehensive code reviews with structured, prioritized feedback. Use when asked to review code, a file, a PR, or a diff — checks for bugs, security vulnerabilities, performance issues, missing tests, and style violations.
 ---
 
 # Code Review

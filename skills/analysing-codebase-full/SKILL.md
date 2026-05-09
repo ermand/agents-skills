@@ -1,6 +1,6 @@
 ---
 name: analysing-codebase-full
-description: Use when thorough onboarding documentation is needed for large or complex codebases, or when the compact analysis lacks sufficient detail.
+description: Comprehensive 4-phase codebase analysis generating 12 documentation files including architecture, data models, business rules, API reference, and AI agent context files. Use when thorough onboarding documentation is needed, when the compact version lacks sufficient detail, or for large/complex codebases.
 ---
 
 # Analysing Codebase (Full)

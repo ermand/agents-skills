@@ -1,6 +1,6 @@
 ---
 name: analysing-codebase
-description: Use when asked to document a codebase, onboard to a new project, create CLAUDE.md, or generate architecture documentation.
+description: Analyzes an existing codebase and generates structured documentation for onboarding engineers and AI agents. Use when asked to document a codebase, onboard to a new project, create CLAUDE.md or AGENTS.md, or generate architecture, API, or domain documentation.
 ---
 
 # Analysing Codebase

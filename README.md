@@ -8,20 +8,14 @@ Skills encode the workflows, quality gates, and best practices that senior engin
 
 ```mermaid
 flowchart LR
-    A["💡 DEFINE<br>Idea Refine"]:::phase
-    B["📝 PLAN<br>Spec PRD"]:::phase
-    C["🏗️ BUILD<br>Code Impl"]:::phase
-    D["🧪 VERIFY<br>Test Debug"]:::phase
-    E["🔍 REVIEW<br>QA Gate"]:::phase
-    F["🚀 SHIP<br>Go Live"]:::phase
+    A("💡 DEFINE<br/>Idea Refine") -->|"/spec"| B("📝 PLAN<br/>Spec PRD")
+    B -->|"/plan"| C("🏗️ BUILD<br/>Code Impl")
+    C -->|"/build"| D("🧪 VERIFY<br/>Test Debug")
+    D -->|"/test"| E("🔍 REVIEW<br/>QA Gate")
+    E -->|"/review"| F("🚀 SHIP<br/>Go Live")
 
-    A -- " /spec " --> B
-    B -- " /plan " --> C
-    C -- " /build " --> D
-    D -- " /test " --> E
-    E -- " /review " --> F
-
-    classDef phase fill:#1f2937,stroke:#4b5563,stroke-width:2px,color:#f9fafb,border-radius:6px
+    classDef default fill:#1f2937,stroke:#4b5563,stroke-width:2px,color:#f9fafb,padding:12px;
+    linkStyle default stroke:#8b949e,stroke-width:2px,color:#c9d1d9;
 ```
 
 7 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
