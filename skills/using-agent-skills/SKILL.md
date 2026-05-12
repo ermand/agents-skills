@@ -5,10 +5,6 @@ description: Discovers and invokes agent skills. Use when starting a session or 
 
 # Using Agent Skills
 
-## When to Use
-
-Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.
-
 ## Overview
 
 Agent Skills is a collection of engineering workflow skills organized by development phase. Each skill encodes a specific process that senior engineers follow. This meta-skill helps you discover and apply the right skill for your current task.
@@ -27,7 +23,8 @@ Task arrives
     │   ├── UI work? ─────────────────→ frontend-ui-engineering
     │   ├── API work? ────────────────→ api-and-interface-design
     │   ├── Need better context? ─────→ context-engineering
-    │   └── Need doc-verified code? ───→ source-driven-development
+    │   ├── Need doc-verified code? ───→ source-driven-development
+    │   └── Stakes high / unfamiliar code? ──→ doubt-driven-development
     ├── Writing/running tests? ────────→ test-driven-development
     │   └── Browser-based? ───────────→ browser-testing-with-devtools
     ├── Something broke? ──────────────→ debugging-and-error-recovery
@@ -139,17 +136,18 @@ These are the subtle errors that look like productivity but create problems:
 For a complete feature, the typical skill sequence is:
 
 ```
-1. idea-refine                 → Refine vague ideas
-2. spec-driven-development     → Define what we're building
-3. planning-and-task-breakdown → Break into verifiable chunks
-4. context-engineering         → Load the right context
-5. source-driven-development   → Verify against official docs
-6. incremental-implementation  → Build slice by slice
-7. test-driven-development     → Prove each slice works
-8. code-review-and-quality     → Review before merge
-9. git-workflow-and-versioning → Clean commit history
-10. documentation-and-adrs     → Document decisions
-11. shipping-and-launch        → Deploy safely
+1.  idea-refine                 → Refine vague ideas
+2.  spec-driven-development     → Define what we're building
+3.  planning-and-task-breakdown → Break into verifiable chunks
+4.  context-engineering         → Load the right context
+5.  source-driven-development   → Verify against official docs
+6.  incremental-implementation  → Build slice by slice
+7.  doubt-driven-development    → Cross-examine non-trivial decisions in-flight
+8.  test-driven-development     → Prove each slice works
+9.  code-review-and-quality     → Review before merge
+10. git-workflow-and-versioning → Clean commit history
+11. documentation-and-adrs      → Document decisions
+12. shipping-and-launch         → Deploy safely
 ```
 
 Not every task needs every skill. A bug fix might only need: `debugging-and-error-recovery` → `test-driven-development` → `code-review-and-quality`.
@@ -163,6 +161,7 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Plan | planning-and-task-breakdown | Decompose into small, verifiable tasks |
 | Build | incremental-implementation | Thin vertical slices, test each before expanding |
 | Build | source-driven-development | Verify against official docs before implementing |
+| Build | doubt-driven-development | Adversarial fresh-context review of every non-trivial decision |
 | Build | context-engineering | Right context at the right time |
 | Build | frontend-ui-engineering | Production-quality UI with accessibility |
 | Build | api-and-interface-design | Stable interfaces with clear contracts |
@@ -176,20 +175,3 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Ship | ci-cd-and-automation | Automated quality gates on every change |
 | Ship | documentation-and-adrs | Document the why, not just the what |
 | Ship | shipping-and-launch | Pre-launch checklist, monitoring, rollback plan |
-
-
-## Common Rationalizations
-
-Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
-- "This task is too small or simple to need the full process."
-- "I can just quickly do it without the checklist."
-- "I already know how this works, so I don't need to verify."
-**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
-
-## Red Flags
-
-**STOP and restart the process if you see any of these:**
-- Skipping mandatory steps in the checklist.
-- Failing to verify outputs before asserting success.
-- Proceeding without user approval when required.
-- Writing code before planning or testing (if dictated by the skill).
