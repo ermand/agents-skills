@@ -49,6 +49,14 @@ cp -r node_modules/@ermand/agent-skills/hooks ~/.claude/
 cp -r node_modules/@ermand/agent-skills/.opencode/commands ~/.config/opencode/
 ```
 
+**For Codex CLI:**
+```bash
+mkdir -p ~/.codex/prompts ~/.codex/skills
+cp -r node_modules/@ermand/agent-skills/.codex/prompts/* ~/.codex/prompts/
+cp -r node_modules/@ermand/agent-skills/skills/* ~/.codex/skills/
+```
+Then append `node_modules/@ermand/agent-skills/.codex/AGENTS.md` to your global `~/.codex/AGENTS.md` so the Codex agent knows when to load each skill.
+
 ### Install Skills
 
 **All skills:**
@@ -145,7 +153,7 @@ For example, using the `analysing-codebase-full` skill generates the following d
 
 ## Commands and Hooks
 
-This repository also includes custom Slash Commands and Tool Hooks for **Claude Code** and **OpenCode**. These provide structured workflows (e.g. `/plan`, `/review`, `/ship`) and automatic triggers (e.g. run linters, play sounds, send notifications) to enhance your agent's capabilities.
+This repository also includes custom Slash Commands and Tool Hooks for **Claude Code**, **OpenCode**, and **Codex CLI**. These provide structured workflows (e.g. `/plan`, `/review`, `/ship`) and automatic triggers (e.g. run linters, play sounds, send notifications) to enhance your agent's capabilities.
 
 ### For Claude Code
 
@@ -177,6 +185,24 @@ OpenCode shares a similar command architecture and can utilize custom personas/c
 Copy the commands from the `.opencode/commands` directory into your global opencode configuration directory:
 ```bash
 cp -r node_modules/@ermand/agent-skills/.opencode/commands ~/.config/opencode/
+```
+
+### For Codex CLI
+
+Codex CLI loads custom slash prompts from `~/.codex/prompts/` and reads `~/.codex/AGENTS.md` as global context. Codex has no built-in skill loader, so the bundled prompts and AGENTS.md template direct the agent to read skill files from `~/.codex/skills/<name>/SKILL.md` on demand.
+
+**Install Commands and Skills:**
+```bash
+mkdir -p ~/.codex/prompts ~/.codex/skills
+cp -r node_modules/@ermand/agent-skills/.codex/prompts/* ~/.codex/prompts/
+cp -r node_modules/@ermand/agent-skills/skills/* ~/.codex/skills/
+```
+
+**Wire skills into AGENTS.md:**
+Append the contents of `node_modules/@ermand/agent-skills/.codex/AGENTS.md` to your global `~/.codex/AGENTS.md` (create the file if it doesn't exist). This adds a skill index so Codex knows when to load each skill.
+
+```bash
+cat node_modules/@ermand/agent-skills/.codex/AGENTS.md >> ~/.codex/AGENTS.md
 ```
 
 ### Available Commands

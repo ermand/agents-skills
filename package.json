@@ -18,6 +18,7 @@
   },
   "files": [
     ".claude/",
+    ".codex/",
     ".opencode/",
     "LICENSE",
     "README.md",
