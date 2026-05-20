@@ -23,6 +23,7 @@
     "LICENSE",
     "README.md",
     "hooks/",
+    "references/",
     "skills/"
   ],
   "license": "MIT"

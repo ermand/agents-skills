@@ -18,6 +18,7 @@ When the user's task matches a skill's purpose, **read the skill file before res
 | Writing a spec / requirements | `~/.codex/skills/spec-driven-development/SKILL.md` |
 | Breaking work into tasks | `~/.codex/skills/planning-and-task-breakdown/SKILL.md` |
 | Implementing a feature | `~/.codex/skills/incremental-implementation/SKILL.md` |
+| High-stakes / unfamiliar code | `~/.codex/skills/doubt-driven-development/SKILL.md` |
 | Writing or running tests | `~/.codex/skills/test-driven-development/SKILL.md` |
 | Browser / DOM testing | `~/.codex/skills/browser-testing-with-devtools/SKILL.md` |
 | Debugging or fixing a bug | `~/.codex/skills/debugging-and-error-recovery/SKILL.md` |
