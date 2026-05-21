@@ -18,7 +18,7 @@ flowchart LR
     linkStyle default stroke:#8b949e,stroke-width:2px,color:#c9d1d9;
 ```
 
-7 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
+8 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
 
 | What you're doing | Command | Key principle |
 |-------------------|---------|---------------|
@@ -28,6 +28,7 @@ flowchart LR
 | Prove it works | `/test` | Tests are proof |
 | Review before merge | `/review` | Improve code health |
 | Simplify the code | `/code-simplify` | Clarity over cleverness |
+| Harden package installs | `/security-age-gate` | Delay fresh package versions |
 | Ship to production | `/ship` | Faster is safer |
 
 Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on.
@@ -101,6 +102,7 @@ npx skills@latest add ermand/agents-skills --skill code-review
 | `idea-refine` | Refines ideas iteratively. Refine ideas through structured divergent and convergent thinking. Use "idea-refine" or "ideate" to trigger. |
 | `improve-codebase-architecture` | Explore a codebase to find opportunities for architectural improvement, focusing on making the codebase more testable by deepening shallow modules. Use when user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more AI-navigable. |
 | `incremental-implementation` | Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step. |
+| `package-release-age-gates` | Use when hardening JavaScript npm dependencies against fresh package publishes, supply-chain attacks, typosquatting windows, compromised package updates, or configuring minimum release age gates for npm, pnpm, Yarn, or Bun. |
 | `performance-optimization` | Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing. |
 | `planning-and-task-breakdown` | Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a task feels too large to start, when you need to estimate scope, or when parallel work is possible. |
 | `prd-to-issues` | Break a PRD into independently-grabbable GitHub issues using tracer-bullet vertical slices. Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items. |
@@ -218,6 +220,7 @@ Once installed, you can trigger these workflows directly in your CLI by typing `
 - `/ship` - Prepares the code for deployment or merging (linting, tests, finalizing PRs).
 - `/code-simplify` - Refactors code to reduce complexity and improve readability.
 - `/code-review` - Performs a multi-axis code review on the current diff or files.
+- `/security-age-gate` - Adds or updates package release-age gate configs for npm, pnpm, Yarn, or Bun.
 - `/interview` / `/pr-open` - Facilitates user interviews for requirements or drafts PR descriptions.
 
 ## License
