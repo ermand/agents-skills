@@ -25,6 +25,7 @@ When the user's task matches a skill's purpose, **read the skill file before res
 | Hard bug or perf regression | `~/.codex/skills/diagnose/SKILL.md` |
 | Reviewing code | `~/.codex/skills/code-review-and-quality/SKILL.md` |
 | Security review | `~/.codex/skills/security-and-hardening/SKILL.md` |
+| Package release-age gate config | `~/.codex/skills/package-release-age-gates/SKILL.md` |
 | Performance work | `~/.codex/skills/performance-optimization/SKILL.md` |
 | API or interface design | `~/.codex/skills/api-and-interface-design/SKILL.md` |
 | Building UI | `~/.codex/skills/frontend-ui-engineering/SKILL.md` |
@@ -58,6 +59,7 @@ The following prompts (in `~/.codex/prompts/`) wire common workflows to slash co
 - `/review` — five-axis code review
 - `/code-review` — multi-axis review with prioritized output
 - `/code-simplify` — reduce complexity, preserve behavior
+- `/security-age-gate` — add package release-age gate config
 - `/ship` — pre-launch checklist
 - `/pr-open` — branch, commit staged, push, PR
 - `/interview` — interview-driven spec generation
