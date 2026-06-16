@@ -6,19 +6,16 @@ Skills encode the workflows, quality gates, and best practices that senior engin
 
 ## Commands
 
-```mermaid
-flowchart LR
-    A("💡 DEFINE<br/>Idea Refine") -->|"/spec"| B("📝 PLAN<br/>Spec PRD")
-    B -->|"/plan"| C("🏗️ BUILD<br/>Code Impl")
-    C -->|"/build"| D("🧪 VERIFY<br/>Test Debug")
-    D -->|"/test"| E("🔍 REVIEW<br/>QA Gate")
-    E -->|"/review"| F("🚀 SHIP<br/>Go Live")
-
-    classDef default fill:#1f2937,stroke:#4b5563,stroke-width:2px,color:#f9fafb,padding:12px;
-    linkStyle default stroke:#8b949e,stroke-width:2px,color:#c9d1d9;
+```
+ Code: DEFINE          PLAN           BUILD          VERIFY         REVIEW          SHIP
+ ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐
+ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │  QA  │ ───▶ │  Go  │
+ │Refine│      │  PRD │      │ Impl │      │Debug │      │ Gate │      │ Live │
+ └──────┘      └──────┘      └──────┘      └──────┘      └──────┘      └──────┘
+  /spec          /plan          /build        /test         /review       /ship 
 ```
 
-8 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
+10 slash commands that map to the development lifecycle. Each one activates the right skills automatically.
 
 | What you're doing | Command | Key principle |
 |-------------------|---------|---------------|
@@ -29,6 +26,8 @@ flowchart LR
 | Review before merge | `/review` | Improve code health |
 | Simplify the code | `/code-simplify` | Clarity over cleverness |
 | Harden package installs | `/security-age-gate` | Delay fresh package versions |
+| Stress-test a plan | `/grill-me` | Resolve decision branches |
+| Diagnose a hard bug | `/diagnose` | Reproduce before fixing |
 | Ship to production | `/ship` | Faster is safer |
 
 Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on.
@@ -47,8 +46,11 @@ cp -r node_modules/@ermand/agent-skills/hooks ~/.claude/
 
 **For OpenCode:**
 ```bash
-cp -r node_modules/@ermand/agent-skills/.opencode/commands ~/.config/opencode/
+mkdir -p ~/.config/opencode/commands ~/.config/opencode/skills
+cp -r node_modules/@ermand/agent-skills/.opencode/commands/* ~/.config/opencode/commands/
+cp -r node_modules/@ermand/agent-skills/skills/* ~/.config/opencode/skills/
 ```
+Restart OpenCode after installing commands or skills.
 
 **For Codex CLI:**
 ```bash
@@ -184,11 +186,13 @@ cp -r node_modules/@ermand/agent-skills/hooks ~/.claude/
 
 OpenCode shares a similar command architecture and can utilize custom personas/commands.
 
-**Install Commands:**
-Copy the commands from the `.opencode/commands` directory into your global opencode configuration directory:
+**Install Commands and Skills:**
 ```bash
-cp -r node_modules/@ermand/agent-skills/.opencode/commands ~/.config/opencode/
+mkdir -p ~/.config/opencode/commands ~/.config/opencode/skills
+cp -r node_modules/@ermand/agent-skills/.opencode/commands/* ~/.config/opencode/commands/
+cp -r node_modules/@ermand/agent-skills/skills/* ~/.config/opencode/skills/
 ```
+Restart OpenCode after installing commands or skills.
 
 ### For Codex CLI
 
@@ -221,6 +225,8 @@ Once installed, you can trigger these workflows directly in your CLI by typing `
 - `/code-simplify` - Refactors code to reduce complexity and improve readability.
 - `/code-review` - Performs a multi-axis code review on the current diff or files.
 - `/security-age-gate` - Adds or updates package release-age gate configs for npm, pnpm, Yarn, or Bun.
+- `/grill-me` - Stress-tests a plan or design through a focused interview.
+- `/diagnose` - Diagnoses hard bugs or performance regressions systematically.
 - `/interview` / `/pr-open` - Facilitates user interviews for requirements or drafts PR descriptions.
 
 ## License
