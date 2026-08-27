@@ -174,7 +174,7 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Verify | tdd | Failing test first, then make it pass |
 | Verify | browser-testing-with-devtools | Chrome DevTools MCP for runtime verification |
 | Verify | debugging-and-error-recovery | Reproduce → localize → fix → guard |
-| Review | code-review | Five-axis review with quality gates |
+| Review | code-review | Comprehensive review with structured, prioritized feedback |
 | Review | code-simplification | Preserve behavior while reducing unnecessary complexity |
 | Review | security-and-hardening | OWASP prevention, input validation, least privilege |
 | Review | performance-optimization | Measure first, optimize only what matters |
