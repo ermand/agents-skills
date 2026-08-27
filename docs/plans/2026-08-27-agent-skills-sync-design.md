@@ -116,3 +116,13 @@ Structural review found two integration gaps introduced by the upstream skill up
 These are local integration adjustments. They preserve the approved exclusion of the upstream-only skill while making all synchronized links and routes resolve in the intended multi-repository setup.
 
 The final verification must allow the three invocation metadata overrides, the three observability-entry removals, and the added shared reference.
+## Router alignment after review
+
+The local meta-router must describe the installed skill set and the Matt-first defaults:
+
+- Remove `interview-me` from discovery, lifecycle, and quick-reference sections because it is excluded from this package.
+- Remove `observability-and-instrumentation` from the same three sections because it is excluded from this package.
+- Use `tdd` and `code-review` in the meta-router wherever the canonical Matt-first workflow is named.
+- Renumber the lifecycle sequence after removing the two unavailable steps.
+
+The only upstream deviations are now the three invocation metadata fields, the unavailable-route removals, the canonical route substitutions, and the lifecycle renumbering.

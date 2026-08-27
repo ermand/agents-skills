@@ -316,3 +316,28 @@ Repeat Task 5 after Tasks 6 and 7. The synchronized files must match upstream ex
 - The three removed unavailable-router entries.
 
 The new `references/definition-of-done.md` must match upstream byte-for-byte. Confirm all local-only skills remain present, both excluded upstream-only directories remain absent, target skill paths have no uncommitted changes, and the pre-existing user worktree changes remain unstaged.
+### Task 9: Align the local meta-router
+
+**Files:**
+
+- Modify: `skills/using-agent-skills/SKILL.md`
+
+The previous cleanup removed only observability entries. Complete the local router alignment:
+
+1. Remove `interview-me` from discovery, lifecycle, and quick-reference sections.
+2. Keep `observability-and-instrumentation` absent from all sections.
+3. Replace `test-driven-development` with `tdd` in discovery, lifecycle, bug-fix guidance, and quick reference.
+4. Replace `code-review-and-quality` with `code-review` in discovery, lifecycle, bug-fix guidance, and quick reference.
+5. Renumber the remaining lifecycle steps consecutively after removing the two unavailable steps.
+
+Preserve every other synchronized line. Run `git diff --check`, inspect the diff, stage only this file, and commit:
+
+```bash
+git add skills/using-agent-skills/SKILL.md
+git diff --cached --check
+git commit -m "chore: align local skill router"
+```
+
+### Task 10: Re-run final verification
+
+Repeat Task 8 after Task 9. In addition to the earlier checks, confirm the local `using-agent-skills` router contains no unavailable `interview-me` or `observability-and-instrumentation` entries and names Matt's `tdd` and `code-review` defaults consistently.
