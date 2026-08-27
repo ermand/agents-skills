@@ -1,17 +1,9 @@
 ---
 name: tdd
-description: Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions "red-green-refactor", wants integration tests, or asks for test-first development.
+description: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
 ---
 
 # Test-Driven Development
-
-## Overview
-
-This skill establishes standard practices and workflows for Tdd.
-
-## When to Use
-
-Use when user wants to build features or fix bugs using TDD, mentions "red-green-refactor", wants integration tests, or asks for test-first development.
 
 ## Philosophy
 
@@ -52,12 +44,13 @@ RIGHT (vertical):
 
 ### 1. Planning
 
+When exploring the codebase, read `CONTEXT.md` (if it exists) so that test names and interface vocabulary match the project's domain language, and respect ADRs in the area you're touching.
+
 Before writing any code:
 
 - [ ] Confirm with user what interface changes are needed
 - [ ] Confirm with user which behaviors to test (prioritize)
-- [ ] Identify opportunities for [deep modules](deep-modules.md) (small interface, deep implementation)
-- [ ] Design interfaces for [testability](interface-design.md)
+- [ ] Identify opportunities for deep modules (small interface, deep implementation) — run the `/codebase-design` skill for the vocabulary and the testability checks
 - [ ] List the behaviors to test (not implementation steps)
 - [ ] Get user approval on the plan
 
@@ -113,20 +106,3 @@ After all tests pass, look for [refactor candidates](refactoring.md):
 [ ] Code is minimal for this test
 [ ] No speculative features added
 ```
-
-
-## Common Rationalizations
-
-Agents often attempt to rationalize skipping strict processes under pressure. Watch out for:
-- "This task is too small or simple to need the full process."
-- "I can just quickly do it without the checklist."
-- "I already know how this works, so I don't need to verify."
-**Reality:** These rationalizations lead to regressions, broken code, and context loss. Follow the process regardless of perceived simplicity.
-
-## Red Flags
-
-**STOP and restart the process if you see any of these:**
-- Skipping mandatory steps in the checklist.
-- Failing to verify outputs before asserting success.
-- Proceeding without user approval when required.
-- Writing code before planning or testing (if dictated by the skill).

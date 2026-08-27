@@ -2,7 +2,7 @@
 description: Perform a comprehensive code review — analyze logic, security, performance, and style
 ---
 
-Invoke the agent-skills:code-review skill.
+Invoke the code-review skill.
 
 Review the changes comprehensively. For each review:
 
