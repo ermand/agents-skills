@@ -39,6 +39,7 @@ When the user's task matches a skill's purpose, **read the skill file before res
 | Writing a PRD | `~/.codex/skills/write-a-prd/SKILL.md` |
 | PRD → issues | `~/.codex/skills/prd-to-issues/SKILL.md` |
 | Triaging issues | `~/.codex/skills/triage/SKILL.md` |
+| Writing or editing any prose | `~/.codex/skills/unslop/SKILL.md` |
 
 ### Rules
 
@@ -47,6 +48,7 @@ When the user's task matches a skill's purpose, **read the skill file before res
 3. **Follow exactly.** Skills are workflows, not suggestions. Don't skip verification steps.
 4. **Surface assumptions.** Before non-trivial work, list the assumptions you're making and ask for correction.
 5. **Verify, don't assume.** A task is complete only when verification (passing tests, build output, runtime data) confirms it.
+6. **Unslop every draft.** Before sending prose (docs, commits, PR bodies, chat replies), apply `~/.codex/skills/unslop/SKILL.md`. It always applies.
 
 ### Slash commands
 

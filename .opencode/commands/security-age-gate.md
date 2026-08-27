@@ -2,7 +2,7 @@
 description: Add or update package release-age gate configs for npm, pnpm, Yarn, or Bun
 ---
 
-Invoke the agent-skills:package-release-age-gates skill.
+Invoke the package-release-age-gates skill.
 
 Detect the active JavaScript package manager from lock/config files, add or update missing release-age gate config, and preserve existing settings and comments.
 
