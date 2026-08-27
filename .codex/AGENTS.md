@@ -19,11 +19,11 @@ When the user's task matches a skill's purpose, **read the skill file before res
 | Breaking work into tasks | `~/.codex/skills/planning-and-task-breakdown/SKILL.md` |
 | Implementing a feature | `~/.codex/skills/incremental-implementation/SKILL.md` |
 | High-stakes / unfamiliar code | `~/.codex/skills/doubt-driven-development/SKILL.md` |
-| Writing or running tests | `~/.codex/skills/test-driven-development/SKILL.md` |
+| Writing or running tests | `~/.codex/skills/tdd/SKILL.md` |
 | Browser / DOM testing | `~/.codex/skills/browser-testing-with-devtools/SKILL.md` |
 | Debugging or fixing a bug | `~/.codex/skills/debugging-and-error-recovery/SKILL.md` |
-| Hard bug or perf regression | `~/.codex/skills/diagnose/SKILL.md` |
-| Reviewing code | `~/.codex/skills/code-review-and-quality/SKILL.md` |
+| Hard bug or perf regression | `~/.codex/skills/diagnosing-bugs/SKILL.md` |
+| Reviewing code | `~/.codex/skills/code-review/SKILL.md` |
 | Security review | `~/.codex/skills/security-and-hardening/SKILL.md` |
 | Package release-age gate config | `~/.codex/skills/package-release-age-gates/SKILL.md` |
 | Performance work | `~/.codex/skills/performance-optimization/SKILL.md` |
