@@ -106,3 +106,13 @@ These metadata changes are intentional local policy, not upstream synchronizatio
 - Upstream descriptions may still overlap with local skills beyond the identified direct duplicates. Keep the first synchronization narrow and review trigger behavior separately.
 - Hosts differ in how they discover frontmatter. The Codex routing update is explicit; other hosts may still index model-invoked descriptions according to their own loaders.
 - The upstream revision can advance after this design is written. Implementation must stop if it does not use the pinned revision.
+## Post-review integration fixes
+
+Structural review found two integration gaps introduced by the upstream skill update:
+
+- Four synchronized skills link to `../../references/definition-of-done.md`, which was absent locally. Add only that required reference from the pinned upstream tree.
+- The synchronized `using-agent-skills` router mentions excluded `observability-and-instrumentation` in its discovery flow, lifecycle sequence, and quick reference. Remove those three unavailable entries from the local copy.
+
+These are local integration adjustments. They preserve the approved exclusion of the upstream-only skill while making all synchronized links and routes resolve in the intended multi-repository setup.
+
+The final verification must allow the three invocation metadata overrides, the three observability-entry removals, and the added shared reference.

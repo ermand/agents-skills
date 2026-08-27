@@ -272,3 +272,47 @@ git status --short
 Expected: the pre-existing user changes remain, plus no unexpected files from synchronization. Do not stage or revert them.
 
 Use `@verification-before-completion` for the final evidence review and `@git-workflow-and-versioning` for any staging or commit ambiguity.
+## Review-driven follow-up tasks
+
+### Task 6: Restore the required shared reference
+
+**Files:**
+
+- Create: `references/definition-of-done.md`
+
+Copy only `references/definition-of-done.md` from upstream commit `7cb7a20bb38b199728d456999c725a0488490ab6`. Do not update the existing shared references. Verify the new file matches the pinned upstream blob, then commit:
+
+```bash
+git add references/definition-of-done.md
+git diff --cached --check
+git commit -m "docs: add shared definition of done"
+```
+
+### Task 7: Remove unavailable router entries
+
+**Files:**
+
+- Modify: `skills/using-agent-skills/SKILL.md`
+
+Remove only the three references to `observability-and-instrumentation`:
+
+1. The discovery-flow row.
+2. The lifecycle-sequence row.
+3. The quick-reference row.
+
+Do not change any other upstream-synchronized content. Verify no occurrence remains, run `git diff --check`, then commit:
+
+```bash
+git add skills/using-agent-skills/SKILL.md
+git diff --cached --check
+git commit -m "chore: remove unavailable skill routes"
+```
+
+### Task 8: Re-run final verification
+
+Repeat Task 5 after Tasks 6 and 7. The synchronized files must match upstream except for:
+
+- `disable-model-invocation: true` in the two Addy alternatives.
+- The three removed unavailable-router entries.
+
+The new `references/definition-of-done.md` must match upstream byte-for-byte. Confirm all local-only skills remain present, both excluded upstream-only directories remain absent, target skill paths have no uncommitted changes, and the pre-existing user worktree changes remain unstaged.
